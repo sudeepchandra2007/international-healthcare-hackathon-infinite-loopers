@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Detection AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Welcome, Dr. Suresh Advani</h1>
+
+        <div id="drop-area">
+            <p>Drag & drop an image here or click to browse</p>
+            <input type="file" id="file-input" accept="image/*" hidden>
+            <label for="file-input" id="file-label">Choose an image</label>
+            <p id="file-name">No file selected</p>
+        </div>
+
+        <div class="image-preview-container">
+            <img id="image-preview" src="#" alt="Selected Image Preview" />
+        </div>
+
+        <button id="submit-btn" disabled>Analyze</button>
+
+        <div id="result">
+            <h2>Analysis Results</h2>
+            <div class="result-container">
+                <div class="result-tile">
+                    <strong>🔍 Findings:</strong>
+                    <span id="findings">Not available</span>
+                </div>
+                <div class="result-tile">
+                    <strong>⚠️ Concerns:</strong>
+                    <span id="concerns">Not specified</span>
+                </div>
+                <div class="result-tile">
+                    <strong>🎯 Cancer Probability:</strong>
+                    <span id="probability">Not available</span>
+                </div>
+                <div class="result-tile">
+                    <strong>🧬 Possible Cancer Type:</strong>
+                    <span id="cancer-type">Not specified</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p>⚠️ Note: These results are AI-generated and should not be used as a substitute for professional medical diagnosis. Always consult a healthcare provider for medical advice.</p>
+        </div>
+        
+        <div id="past-analyses">
+            <h2>Past Analyses</h2>
+            <div class="table-container">
+                <table class="past-results-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Findings</th>
+                            <th>Concerns</th>
+                            <th>Probability</th>
+                            <th>Cancer Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="past-results-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Thank you for using Cancer Detection AI.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
