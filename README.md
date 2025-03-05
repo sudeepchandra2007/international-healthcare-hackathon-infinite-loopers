@@ -41,7 +41,7 @@ infinite loopers cancer detection
 ## **🚀 Installation & Setup**
 ### **🔹 1. Clone the Repository**
 ```bash
-git clone https://github.com/your-username/cancer-detection-ai.git
+git clone https://github.com/sudeepchandra2007/cancer-detection-ai.git
 cd cancer-detection-ai
 ```
 
